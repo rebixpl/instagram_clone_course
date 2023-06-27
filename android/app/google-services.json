@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "943383945116",
+    "project_id": "insta-va",
+    "storage_bucket": "insta-va.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943383945116:android:a07f5758a5dadd2692f259",
+        "android_client_info": {
+          "package_name": "com.krystiangulas.instagram_clone_course"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "943383945116-p2a1edci49k8qhk7jbih88dlv1hc9a0d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiV8nWx13KQa45lQMKFFrWrHgfOQQdkbw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "943383945116-p2a1edci49k8qhk7jbih88dlv1hc9a0d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
