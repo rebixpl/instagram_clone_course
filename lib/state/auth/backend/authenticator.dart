@@ -60,6 +60,27 @@ class Authenticator {
   }
 
   Future<AuthResult> loginWithGoogle() async {
-    return AuthResult.failure;
+    final GoogleSignIn googleSignIn = GoogleSignIn(
+      scopes: [Constants.emailScope],
+    );
+
+    final signInAccount = await googleSignIn.signIn();
+    if (signInAccount == null) {
+      // The user has aborted the login process.
+      return AuthResult.aborted;
+    }
+
+    final googleAuth = await signInAccount.authentication;
+    final oauthCredential = GoogleAuthProvider.credential(
+      accessToken: googleAuth.accessToken,
+      idToken: googleAuth.idToken,
+    );
+
+    try {
+      await FirebaseAuth.instance.signInWithCredential(oauthCredential);
+      return AuthResult.success;
+    } on FirebaseAuthException catch (e) {
+      return AuthResult.failure;
+    }
   }
 }
