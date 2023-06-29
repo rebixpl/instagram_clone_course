@@ -6,6 +6,8 @@ import 'package:instagram_clone_course/state/auth/models/auth_result.dart';
 import 'package:instagram_clone_course/state/posts/typedefs/user_id.dart';
 
 class Authenticator {
+  const Authenticator();
+
   User? get currentUser => FirebaseAuth.instance.currentUser;
 
   UserId? get userId => currentUser?.uid;
